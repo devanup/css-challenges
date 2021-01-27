@@ -1,0 +1,90 @@
+@import "./1-abstracts/_abstracts-dir";
+@import "./2-base/_base-dir";
+
+body {
+	background-color: $primary-bg-color;
+	height: 100vh;
+	overflow: hidden;
+	&::before {
+		position: absolute;
+		content: "";
+		top: -200px;
+		left: -200px;
+		width: 700px;
+		height: 700px;
+		border-radius: 50%;
+		background-image: url("../img/bg-pattern-top.svg");
+		z-index: -1;
+		@include mobile {
+			width: 500px;
+			height: 500px;
+		}
+	}
+	&::after {
+		position: absolute;
+		content: "";
+		bottom: -200px;
+		right: -200px;
+		width: 700px;
+		height: 700px;
+		background-image: url("../img/bg-pattern-bottom.svg");
+		z-index: -1;
+		@include mobile {
+			width: 500px;
+			height: 500px;
+			bottom: 0px;
+			right: -200px;
+		}
+	}
+}
+.top-section {
+	position: relative;
+	height: 160px;
+	background-color: yellow;
+	background: url("../img/bg-pattern-card.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+	.profile-pic {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%) translateY(70%);
+		width: 130px;
+		height: 130px;
+		border-radius: 50%;
+		background-image: url("../img/image-victor.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border: 6px solid #fff;
+	}
+}
+
+.center-container {
+	@include verticalCenter;
+}
+.profile-card {
+	width: 500px;
+	margin: 0 auto;
+	background-color: #fff;
+	border-radius: 15px;
+	overflow: hidden;
+	-webkit-box-shadow: 0px 10px 34px -13px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0px 10px 34px -13px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 10px 34px -13px rgba(0, 0, 0, 0.5);
+	@include mobile {
+		width: 400px;
+	}
+}
+
+.middle-section {
+	border-bottom: 1px solid $secondary-text-color;
+	margin-top: 70px;
+}
+.bottom-section {
+	height: 140px;
+	@include flexCenter;
+	@include mobile {
+		height: 110px;
+	}
+}

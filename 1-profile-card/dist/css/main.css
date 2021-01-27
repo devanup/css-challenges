@@ -1,0 +1,218 @@
+@import url(https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap);
+* {
+  margin: 0 auto;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main-heading {
+  max-width: 45%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-top: 15px;
+}
+
+.main-heading .main-heading-primary, .main-heading .main-heading-secondary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.7em;
+  font-weight: 700;
+  color: #2d3248;
+}
+
+@media (max-width: 600px) {
+  .main-heading .main-heading-primary, .main-heading .main-heading-secondary {
+    font-size: 1.5em;
+  }
+}
+
+.main-heading .main-heading-secondary {
+  color: #6a6f81;
+  font-weight: 100;
+}
+
+@media (max-width: 600px) {
+  .main-heading {
+    max-width: 50%;
+  }
+}
+
+.sub-heading {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+.sub-heading .sub-heading-primary {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.3em;
+  font-weight: 100;
+  color: #969696;
+}
+
+@media (max-width: 600px) {
+  .sub-heading .sub-heading-primary {
+    font-size: 1.1em;
+    font-weight: 100;
+    color: #6a6f81;
+  }
+}
+
+.bottom-section {
+  max-width: 85%;
+  text-align: center;
+}
+
+.bottom-section h1, .bottom-section p {
+  text-transform: uppercase;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.8em;
+  color: #2d3248;
+}
+
+@media (max-width: 600px) {
+  .bottom-section h1, .bottom-section p {
+    font-size: 1.5em;
+  }
+}
+
+.bottom-section p {
+  font-size: 1em;
+  letter-spacing: 0.09em;
+  text-transform: none;
+  font-weight: 400;
+  color: #969696;
+  margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+  .bottom-section p {
+    font-size: 0.9em;
+  }
+}
+
+body {
+  background-color: #19a2ae;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body::before {
+  position: absolute;
+  content: "";
+  top: -200px;
+  left: -200px;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background-image: url("../img/bg-pattern-top.svg");
+  z-index: -1;
+}
+
+@media (max-width: 600px) {
+  body::before {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+body::after {
+  position: absolute;
+  content: "";
+  bottom: -200px;
+  right: -200px;
+  width: 700px;
+  height: 700px;
+  background-image: url("../img/bg-pattern-bottom.svg");
+  z-index: -1;
+}
+
+@media (max-width: 600px) {
+  body::after {
+    width: 500px;
+    height: 500px;
+    bottom: 0px;
+    right: -200px;
+  }
+}
+
+.top-section {
+  position: relative;
+  height: 160px;
+  background-color: yellow;
+  background: url("../img/bg-pattern-card.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.top-section .profile-pic {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(70%);
+          transform: translateX(-50%) translateY(70%);
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-image: url("../img/image-victor.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 6px solid #fff;
+}
+
+.center-container {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.profile-card {
+  width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 10px 34px -13px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 10px 34px -13px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 600px) {
+  .profile-card {
+    width: 400px;
+  }
+}
+
+.middle-section {
+  border-bottom: 1px solid #969696;
+  margin-top: 70px;
+}
+
+.bottom-section {
+  height: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 600px) {
+  .bottom-section {
+    height: 110px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

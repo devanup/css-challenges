@@ -1,0 +1,68 @@
+.main-heading {
+	max-width: 45%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	padding-top: 15px;
+	#{&}-primary {
+		font-family: $font;
+		font-size: 1.7em;
+		font-weight: $bold;
+		color: $primary-text-color;
+		@include mobile {
+			font-size: 1.5em;
+		}
+	}
+	#{&}-secondary {
+		@extend .main-heading-primary;
+		color: $secondary-color;
+		font-weight: $light;
+	}
+	@include mobile {
+		max-width: 50%;
+	}
+}
+
+.sub-heading {
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 30px;
+	#{&}-primary {
+		font-family: $font;
+		font-size: 1.3em;
+		font-weight: $light;
+		color: $secondary-text-color;
+		@include mobile {
+			font-size: 1.1em;
+			font-weight: $light;
+			color: $secondary-color;
+		}
+	}
+}
+
+.bottom-section {
+	max-width: 85%;
+	text-align: center;
+	h1 {
+		text-transform: uppercase;
+		font-family: $font;
+		font-weight: $bold;
+		font-size: 1.8em;
+		color: $primary-text-color;
+		@include mobile {
+			font-size: 1.5em;
+		}
+	}
+	p {
+		@extend h1;
+		font-size: 1em;
+		letter-spacing: 0.09em;
+		text-transform: none;
+		font-weight: $regular;
+		color: $secondary-text-color;
+		margin-top: 8px;
+		@include mobile {
+			font-size: 0.9em;
+		}
+	}
+}
